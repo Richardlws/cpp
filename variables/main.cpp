@@ -33,7 +33,7 @@ int main()
     bool power = true;
 
     bool forSale = true;
-    //String 
+    //String (objects that represents a sequence of text)
     std::string name = "Bro";
     std::string day = "Friday";
     std::string food ="pizza";
