@@ -1,6 +1,6 @@
 #include <iostream>
 int main(){
-    int month;
+    /*int month;
     std::cout<<"Enter the month(1-12): ";
     std::cin>>month;
 
@@ -43,6 +43,29 @@ int main(){
             break;
         default:
             std::cout<<"Please enter in only numbers (1-12)";
-        }
-    return 0;
+        }*/
+       char grade;
+       std::cout<<"What letter grade?: ";
+       std::cin>>grade;
+
+       switch(grade){
+        case 'A':
+            std::cout<<"You did great!";
+            break;
+        case 'B':
+            std::cout<<"You did good!";
+            break;
+        case 'C':
+            std::cout<<"You did okay!";
+            break;
+        case 'D':
+            std::cout<<"You did not so good!";
+            break;
+        case 'F':
+            std::cout<<"You FAILED!";
+            break;
+        default:
+            std::cout<<"Please only enter in a letter grade(A-F)";
+       }
+       return 0;
 }
