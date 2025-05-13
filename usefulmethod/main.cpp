@@ -21,9 +21,14 @@ int main()
    }
    else{
         std::cout<<"Hello "<<name;
-   }*/
+   }
    name.append("@gmail.com");
-   std::cout<<"Your username is now "<<name;
+   std::cout<<"Your username is now "<<name;*/
+   //std::cout<<name.at(0);
+   //name.insert(0,"@");
+
+   //std::cout<<name.find(' ');
+   std::cout<<name.erase(0,3);
 
     return 0;
 }
