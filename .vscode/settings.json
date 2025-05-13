@@ -100,5 +100,11 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+  "cpp": "cd $dir && g++ -std=c++11 -static \"$fileName\" -o \"$fileNameWithoutExt.exe\" && .\\$fileNameWithoutExt.exe"
   }
+
 }
+  

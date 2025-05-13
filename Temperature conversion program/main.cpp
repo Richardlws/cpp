@@ -27,7 +27,7 @@ int main()
         std::cout << "Temperature is: " << temp << "C\n";
     }
     else{
-        std::cout<<"Please enter a valid unit (F or H)\n";
+        std::cout<<"Please enter in only C or F\n";
     }
     std::cout<<"***************************************";
 

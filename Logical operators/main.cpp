@@ -14,7 +14,7 @@ int main()
         std::cout<<"The temperature is bad!";
     }*/
 
-    if (temp < 0 || temp > 30)
+    if (temp < 21 || temp > 30)
     {
         std::cout << "The temperature is bad!\n";
     }
