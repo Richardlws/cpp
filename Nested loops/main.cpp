@@ -11,11 +11,11 @@ int main(){
    int columns;
    char symbol;
 
-   std::cout<<"Please enter the symbol: ";
+   std::cout<<"Enter a symbol to use: ";
    std::cin>>symbol;
-   std::cout<<"Please enter the rows: ";
+   std::cout<<"How many rows?: ";
    std::cin>>rows;
-   std::cout<<"Please enter the columns: ";
+   std::cout<<"How many columns: ";
    std::cin>>columns;
 
    for (int i=1;i<=rows;i++){
