@@ -12,7 +12,8 @@ int main()
     std::cout << "Hello " << name;*/
     while (1==1)
     {
-        std::cout << "Help! I'm stuck in an infinite loop";
+        std::cout << "Help! I'm stuck in an infinite loop\n";
+        
     }
 
     return 0;
