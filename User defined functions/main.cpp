@@ -1,20 +1,23 @@
 #include <iostream>
 
-void happyBirthday(std::string name);
+void happyBirthday(std::string name, int age);
 
-int main(){
+int main()
+{
 
-    std::string name="Bro";
+    std::string name = "Bro";
+    int age = 21;
 
-    happyBirthday(name);
+    happyBirthday(name, age);
 
     return 0;
 }
-void happyBirthday(std::string name){
+void happyBirthday(std::string name, int age)
+{
 
-    std::cout<<"Happy Birthday to "<<name<<"!\n";
-    std::cout<<"Happy Birthday to "<<name<<"!\n";
-    std::cout<<"Happy Birthday dear "<<name<<"!\n";
-    std::cout<<"Happy Birthday to "<<name<<"!\n";
-
+    std::cout << "Happy Birthday to " << name << "!\n";
+    std::cout << "Happy Birthday to " << name << "!\n";
+    std::cout << "Happy Birthday dear " << name << "!\n";
+    std::cout << "Happy Birthday to " << name << "!\n";
+    std::cout << "You are " << age << " years old!\n";
 }
