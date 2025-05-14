@@ -6,7 +6,7 @@ int main()
 {
 
     double length = 5.0;
-    std::cout << "The square's area is: " << square(length) << "cm²";
+    std::cout << "The square's area is: " << square(length) << "cm^2";
 
     return 0;
 }
