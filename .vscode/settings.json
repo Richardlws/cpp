@@ -100,7 +100,8 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp",
-    "ctime": "cpp"
+    "ctime": "cpp",
+    "iomanip": "cpp"
   },
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {

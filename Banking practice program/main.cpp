@@ -1,12 +1,13 @@
 #include <iostream>
+#include <iomanip>
 
 void showBanlance(double balance);
 double deposit();
-double withdrea(double balance);
+double withdraw(double balance);
 
 int main()
 {
-    double balance = 0;
+    double balance = 12344;
     int choice = 0;
     do
     {
@@ -17,6 +18,7 @@ int main()
         std::cout << "2.Deposit Money\n";
         std::cout << "3.Withdraw Money\n";
         std::cout << "4.Exit\n";
+        std::cout << "***********************\n";
         std::cin >> choice;
 
         switch (choice)
@@ -25,10 +27,12 @@ int main()
             showBanlance(balance);
             break;
         case 2:
-            balance += balance;
+            balance += deposit();
+            showBanlance(balance);
             break;
         case 3:
-            balance -= balance;
+            balance -= withdraw(balance);
+            showBanlance(balance);
             break;
         case 4:
             std::cout << "Thanks for visiting!\n";
@@ -40,17 +44,35 @@ int main()
 
     return 0;
 }
-void showBanlance(double balance){
-    std::cout<<"Your balance is: "<<balance<<"\n";
+void showBanlance(double balance)
+{
+    std::cout << "Your balance is: $" << std::setprecision(2) << std::fixed << balance << "\n";
 }
-double deposit(){
-    double 
-    std::cout<<"Enter your deposit: "
-    std::cin>>deposit;
-
-
-    std::cout<<"Your balance is: "<<balance<<"\n";
+double deposit()
+{
+    double amount = 0;
+    std::cout<< "Enter amount to be  deposited: " ;
+    std::cin >>amount;
+    if(amount<=0){
+        std::cout<<"That's not a valid amount\n";
+        return 0;
+    }
+    else{
+        return amount;
+    }
 }
-double withdrea(double balance){
+double withdraw(double balance)
+{
+    double amount =0;
+    std::cout<< "Enter amount to be withdrawn: " ;
+    std::cin >>amount;
+    if(amount>balance){
+        std::cout<<"Invalid amount"<<"\n";
+        return 0;
+    }
+    else{
+        return amount;
+    }
+
     return 0;
 }
