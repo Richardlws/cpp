@@ -67,7 +67,11 @@ double withdraw(double balance)
     std::cout<< "Enter amount to be withdrawn: " ;
     std::cin >>amount;
     if(amount>balance){
-        std::cout<<"Invalid amount"<<"\n";
+        std::cout<<"insufficient funds\n";
+        return 0;
+    }
+    else if(amount < 0){
+        std::cout<<"That's not a valid amount\n";
         return 0;
     }
     else{
