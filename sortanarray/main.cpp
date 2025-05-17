@@ -11,12 +11,12 @@ int main(){
 }
 void sort(int arrays[],int size){
     int temp;
-    for (int j=0;j<size;j++){
-        for (int i=0;i<size-1-j;i++){
-            if(arrays[i]>arrays[i+1]){
-                temp=arrays[i+1];
-                arrays[i+1]=arrays[i];
-                arrays[i]=temp;
+    for (int i=0;i<size;i++){
+        for (int j=0;j<size-1-i;j++){
+            if(arrays[j]>arrays[j+1]){
+                temp=arrays[j+1];
+                arrays[j+1]=arrays[j];
+                arrays[j]=temp;
             }
         }
     }   
