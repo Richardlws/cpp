@@ -14,22 +14,22 @@ int main()
     char choice;
     for (int i = 0; i < sizeof(questions) / sizeof(questions[0]); i++)
     {
-        std::cout<<"********************************\n";
+        std::cout << "********************************\n";
         std::cout << questions[i] << "\n";
-        std::cout<<"********************************\n";
+        std::cout << "********************************\n";
 
         for (int j = 0; j < sizeof(options[i]) / sizeof(options[i][j]); j++)
         {
             std::cout << options[i][j] << "\n";
         }
         std::cout << "Enter your choice: ";
-        std::cin>>choice;
+        std::cin >> choice;
         choice = toupper(choice);
-            // std::cout<<"\n";
-            if (choice == answerkey[i])
+        // std::cout<<"\n";
+        if (choice == answerkey[i])
         {
             std::cout << "You are right!" << "\n";
-            righttimes += 1;
+            righttimes++;
         }
         else
         {
@@ -37,7 +37,13 @@ int main()
             std::cout << "The right answer is: " << answerkey[i] << "\n";
         }
     }
-    std::cout << "Your grade is: " << righttimes << "/" << sizeof(questions) / sizeof(questions[0]) << "\n";
+    std::cout<<"*************************\n";
+    std::cout<<"*       RESULT          *\n";
+    std::cout<<"*************************\n";
+    std::cout<<"CORRECT GUESSES: "<<righttimes<<"\n";
+    std::cout<<"# of QUESTIONS: "<<sizeof(questions)<<"\n";
+    std::cout << "Your score is: " << righttimes << "/" << sizeof(questions) / sizeof(questions[0]) << "\n";
+    std::cout << "Your score is: " << righttimes /double((sizeof(questions) / sizeof(questions[0])))*100 << "%\n";
 
     return 0;
 }
