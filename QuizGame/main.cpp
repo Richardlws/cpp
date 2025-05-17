@@ -14,14 +14,17 @@ int main()
     char choice;
     for (int i = 0; i < sizeof(questions) / sizeof(questions[0]); i++)
     {
+        std::cout<<"********************************\n";
         std::cout << questions[i] << "\n";
+        std::cout<<"********************************\n";
 
         for (int j = 0; j < sizeof(options[i]) / sizeof(options[i][j]); j++)
         {
             std::cout << options[i][j] << "\n";
         }
         std::cout << "Enter your choice: ";
-        choice = std::toupper(std::cin.get());
+        std::cin>>choice;
+        choice = toupper(choice);
             // std::cout<<"\n";
             if (choice == answerkey[i])
         {
