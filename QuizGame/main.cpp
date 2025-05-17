@@ -7,7 +7,7 @@ int main()
                                "3. What is the predecessor of C++?: ",
                                "4. Is the Earth flat?"};
     std::string options[][4] = {{"A. 1969", "B. 1975", "C. 1985", "D. 1989"},
-                                {"A. Guido van Rossum", "B. Bjarne Stroustrup", "C.John Carmack", "D.Mark Zuckerb"},
+                                {"A. Guido van Rossum", "B. Bjarne Stroustrup", "C. John Carmack", "D. Mark Zuckerb"},
                                 {"A. C", "B. C+", "C. C--", "D. B++"},
                                 {"A. yes", "B. no", "C.sometimes", "D.what's Earth?"}};
     char answerkey[] = {'C', 'B', 'A', 'B'};
