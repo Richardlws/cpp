@@ -1,6 +1,8 @@
 #include <iostream>
 int main(){
-    std::string foods[10]={"pizza","pizza","pizza","pizza","pizza","pizza","pizza","pizza","pizza","pizza"};
+    const int SIZE =100;
+    std::string foods[SIZE];
+    fill(foods,foods+SIZE,"pizza");
     for(std::string food : foods){
         std::cout<<food<<"\n";
     }
