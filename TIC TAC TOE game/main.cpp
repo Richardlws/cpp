@@ -23,6 +23,11 @@ int main()
             running = false;
             break;
         }
+        else if (checkTie(spaces))
+        {
+            running = false;
+            break;
+        }
 
         computerMOve(spaces, computer);
         drawBoard(spaces);
@@ -31,7 +36,14 @@ int main()
             running = false;
             break;
         }
+        else if (checkTie(spaces))
+        {
+            running = false;
+            break;
+        }
+        
     }
+    std::cout << "Thanks for palying!\n";
     return 0;
 }
 
@@ -94,6 +106,20 @@ bool checkWinner(char *spaces, char player, char computer)
     {
         spaces[6] == player ? std::cout << "YOU WIN!\n" : std::cout << "YOU LOSE!\n";
     }
+
+    else if (spaces[0] != ' ' && spaces[0] == spaces[3] && spaces[3] == spaces[6])
+    {
+        spaces[0] == player ? std::cout << "YOU WIN!\n" : std::cout << "YOU LOSE!\n";
+    }
+    else if (spaces[1] != ' ' && spaces[1] == spaces[4] && spaces[4] == spaces[7])
+    {
+        spaces[1] == player ? std::cout << "YOU WIN!\n" : std::cout << "YOU LOSE!\n";
+    }
+    else if (spaces[2] != ' ' && spaces[2] == spaces[5] && spaces[5] == spaces[8])
+    {
+        spaces[2] == player ? std::cout << "YOU WIN!\n" : std::cout << "YOU LOSE!\n";
+    }
+
     else if (spaces[0] != ' ' && spaces[0] == spaces[4] && spaces[4] == spaces[8])
     {
         spaces[0] == player ? std::cout << "YOU WIN!\n" : std::cout << "YOU LOSE!\n";
@@ -102,12 +128,21 @@ bool checkWinner(char *spaces, char player, char computer)
     {
         spaces[0] == player ? std::cout << "YOU WIN!\n" : std::cout << "YOU LOSE!\n";
     }
-    else{
+    else
+    {
         return false;
     }
     return true;
 }
 bool checkTie(char *spaces)
 {
-    return 0;
+    for (int i = 0; i < 9; i++)
+    {
+        if (spaces[i] == ' ')
+        {
+            return false;
+        }
+    }
+    std::cout << "It's a tie!\n";
+    return true;
 }
