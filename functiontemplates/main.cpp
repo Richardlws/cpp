@@ -1,7 +1,7 @@
 #include <iostream>
-template <typename T>
+template <typename T,typename U>
 
-T max(T x, T y)
+auto max(T x, U y) -> decltype((x > y) ? x : y)
 {
     return (x > y) ? x : y;
 }
@@ -15,6 +15,6 @@ char max(char x, char y)
 }*/
 int main()
 {
-    std::cout << max(1, 2) << '\n';
+    std::cout << max(1, 2.1) << '\n';
     return 0;
 }
